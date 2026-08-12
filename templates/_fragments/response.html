@@ -1,0 +1,25 @@
+{% load static %}
+<section class="modern-section">
+    <div class="container">
+        <div class="modern-form-card single-column-card">
+            <div class="modern-form-copy">
+                <span class="eyebrow">ВАША ДУМКА ВАЖЛИВА</span>
+                <h2>Залишити відгук</h2>
+                <p>Відгук збережеться в системі та з’явиться на сайті після модерації адміністратором.</p>
+            </div>
+            <div class="modern-form-panel">
+                {% if messages %}
+                    {% for message in messages %}<div class="modern-alert success">{{ message }}</div>{% endfor %}
+                {% endif %}
+                <form method="post" action="{% url 'response_create' %}" enctype="multipart/form-data" novalidate>
+                    {% csrf_token %}
+                    <div class="modern-field"><label>{{ form.name.label }}</label>{{ form.name }}{{ form.name.errors }}</div>
+                    <div class="modern-field"><label>{{ form.email.label }}</label>{{ form.email }}{{ form.email.errors }}</div>
+                    <div class="modern-field"><label>{{ form.response.label }}</label>{{ form.response }}{{ form.response.errors }}</div>
+                    <div class="modern-field"><label>{{ form.image.label }} <small>(необов’язково)</small></label>{{ form.image }}{{ form.image.errors }}</div>
+                    <button type="submit" class="modern-submit">Надіслати відгук <i class="fa fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

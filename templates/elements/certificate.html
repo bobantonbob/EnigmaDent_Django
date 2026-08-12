@@ -1,0 +1,64 @@
+{% extends '_layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+
+    <link rel="stylesheet" href="{% static 'css/certificate.css' %}">
+    {% include '_fragments/Banner Area End.html' %}
+<div class="container_certificate">
+    <br>
+      <div>
+        <div class="row cer ">
+            <div class="col s4  ">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c1.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c2.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c7.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c4.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c8.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c10.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c5.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c6.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c3.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c11.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+            <div class="col s4">
+                <img class="materialboxed responsive-img" width="450" src="{% static 'images/elements/c9.jpg' %}" data-caption="Enigma-Dent" alt="Enigma-Dent">
+            </div>
+        </div>
+      </div>
+    <br>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let elems = document.querySelectorAll('.materialboxed');
+        let instances = M.Materialbox.init(elems, {
+            inDuration: 300,
+            outDuration: 400
+        });
+    })
+  </script>
+
+
+{% endblock content %}

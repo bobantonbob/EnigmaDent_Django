@@ -1,0 +1,53 @@
+{% extends '_layouts/base.html' %}{% load static %}{% block content %}
+<section class="page-hero price-hero" style="background-image:url('{% static 'enigma/images/bg_2.jpg' %}');">
+  <div class="container"><p class="enigma-hero-kicker">АКТУАЛЬНИЙ ПРАЙС ENIGMA DENT</p><h1>Ціни на стоматологічні послуги.</h1><p>Терапія, пародонтологія та ортопедія — усі позиції нижче керуються через Django Admin. Актуально з 23.03.2026.</p></div>
+</section>
+<section class="ftco-section price-dynamic-section"><div class="container">
+  <div class="price-toolbar mb-5">
+    <div class="price-tabs" role="navigation" aria-label="Розділи прайсу">
+      <button type="button" class="price-tab active" data-price-target="therapy">Терапія</button>
+      <button type="button" class="price-tab" data-price-target="periodontology">Пародонтологія</button>
+      <button type="button" class="price-tab" data-price-target="orthopedics">Ортопедія</button>
+    </div>
+    <div class="price-search-wrap"><span class="icon-search"></span><input id="price-search" type="search" placeholder="Знайти послугу або код…" aria-label="Пошук у прайсі"></div>
+  </div>
+
+  {% for key, categories in price_groups.items %}
+  <div class="price-section-panel {% if forloop.first %}active{% endif %}" data-price-panel="{{ key }}">
+    <div class="price-section-heading mb-4">
+      {% if key == 'therapy' %}<span>Терапевтична стоматологія</span><h2>Лікування, реставрації та ендодонтія</h2><p>Консультація, анестезія, лікування каналів, фотополімерні реставрації та профілактика.</p>
+      {% elif key == 'periodontology' %}<span>Пародонтологія</span><h2>Ясна, професійна гігієна та Vector-терапія</h2><p>Шинування, професійна чистка, відбілювання та пародонтологічна підтримка.</p>
+      {% else %}<span>Ортопедична стоматологія</span><h2>Коронки, кераміка, вкладки та протези</h2><p>Відновлення форми, функції та естетики — від коронки до знімного протезування.</p>{% endif %}
+    </div>
+    <div class="price-category-stack">
+      {% for category in categories %}
+      <article class="price-admin-category" data-price-search="{{ category.title|lower }} {{ category.subtitle|lower }}">
+        <div class="price-admin-category-head"><div><h3>{{ category.title }}</h3>{% if category.subtitle %}<p>{{ category.subtitle }}</p>{% endif %}</div><span>{{ category.items.all|length }} позицій</span></div>
+        <div class="price-table-list">
+          {% for item in category.items.all %}{% if item.is_active %}
+          <div class="price-row" data-price-search="{{ item.code|lower }} {{ item.name|lower }} {{ item.note|lower }}">
+            <div class="price-code">{{ item.code|default:'—' }}</div>
+            <div class="price-name"><strong>{{ item.name }}</strong>{% if item.note %}<small>{{ item.note }}</small>{% endif %}</div>
+            <div class="price-value">{{ item.display_price }}</div>
+          </div>
+          {% endif %}{% empty %}<div class="price-empty">Позиції ще не додані.</div>{% endfor %}
+        </div>
+      </article>
+      {% empty %}<div class="alert alert-light border">Цей розділ ще не заповнений в адмінці.</div>{% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="price-disclaimer mt-5"><strong>Важливо.</strong> Фінальна вартість може залежати від клінічної ситуації, матеріалів та фактичного обсягу лікування. Точний план формується після огляду.</div>
+</div></section>
+<section class="seo-faq-section"><div class="container"><div class="row"><div class="col-lg-5"><span class="subheading">Прайс і лікування</span><h2>Як формується вартість?</h2><p>Ми публікуємо базові ціни, щоб пацієнт міг зорієнтуватися до візиту. Для складних реставрацій, ендодонтії та ортопедичних конструкцій обсяг залежить від стану зуба й плану лікування.</p><a href="{% url 'create' %}" class="btn btn-primary px-4 py-3">Записатися на консультацію</a></div><div class="col-lg-7"><div class="seo-faq-card"><h3>Чи можна дізнатися точну ціну телефоном?</h3><p>Для стандартної послуги — орієнтир є у прайсі. Для клінічних випадків точна сума визначається після огляду.</p></div><div class="seo-faq-card"><h3>Де змінюються ціни на сайті?</h3><p>Адміністратор змінює категорії та кожну позицію в Django Admin — без редагування HTML.</p></div><div class="seo-faq-card"><h3>Як швидко записатися?</h3><p>Через онлайн-форму, Telegram або за телефоном +38 (066) 209-04-09.</p></div></div></div></div></section>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const tabs=[...document.querySelectorAll('.price-tab')], panels=[...document.querySelectorAll('.price-section-panel')], input=document.getElementById('price-search');
+  tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));panels.forEach(x=>x.classList.remove('active'));t.classList.add('active');document.querySelector('[data-price-panel="'+t.dataset.priceTarget+'"]').classList.add('active');if(input){input.value='';filter('')}}));
+  function filter(q){q=(q||'').trim().toLowerCase();document.querySelectorAll('.price-admin-category').forEach(cat=>{let visible=0;cat.querySelectorAll('.price-row').forEach(row=>{const ok=!q||row.dataset.priceSearch.includes(q);row.style.display=ok?'grid':'none';if(ok)visible++});cat.style.display=(!q||visible||cat.dataset.priceSearch.includes(q))?'block':'none';});}
+  if(input) input.addEventListener('input',e=>filter(e.target.value));
+  const hash=(window.location.hash||'').replace('#',''); if(hash){const target=document.querySelector('.price-tab[data-price-target=\"'+hash+'\"]'); if(target) target.click();}
+});
+</script>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends '_layouts/base.html' %}{% load static %}{% block content %}
+<section class="page-hero" style="background-image:url('{% static 'enigma/images/about.jpg' %}');"><div class="container"><p class="enigma-hero-kicker">ПРО ENIGMA DENT</p><h1>Стоматологія з людським поясненням.</h1><p>Наша задача — щоб пацієнт розумів, що відбувається, навіщо потрібна процедура і які є варіанти.</p></div></section>
+<section class="ftco-section"><div class="container"><div class="row align-items-center"><div class="col-md-6 mb-4"><img src="{% static 'enigma/images/about-2.jpg' %}" class="img-fluid rounded" alt="Стоматологічне лікування"></div><div class="col-md-6 heading-section"><span class="subheading">Наш підхід</span><h2>Менше маркетингового шуму. Більше конкретики.</h2><p>Enigma Dent працює у трьох основних напрямах: терапевтична стоматологія, пародонтологія та ортопедія. На сайті ми показуємо послуги й ціни відкрито, а запис робимо максимально простим.</p><p>Веб-заявки зберігаються в адмін-панелі, а відгуки публікуються тільки після модерації.</p><a href="{% url 'departments' %}" class="btn btn-primary px-4 py-3">Наші послуги</a></div></div></div></section>
+{% if page_obj %}<section class="ftco-section testimony-section"><div class="container"><div class="heading-section text-center mb-5"><span class="subheading">Відгуки</span><h2>Досвід пацієнтів</h2></div><div class="row">{% for review in page_obj %}<div class="col-md-6 mb-4"><div class="enigma-service-card"><p>“{{ review.response }}”</p><strong>{{ review.name }}</strong></div></div>{% empty %}<div class="col-12 text-center"><p>Опублікованих відгуків поки немає.</p></div>{% endfor %}</div><div class="text-center"><a href="{% url 'response_create' %}" class="btn btn-primary">Залишити відгук</a></div></div></section>{% endif %}
+
+<section class="ftco-section google-reviews-section about-google-reviews">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8 text-center heading-section">
+        <span class="subheading">Google Business Profile</span>
+        <h2>Відгуки Enigma Dent у Google</h2>
+        {% if google_rating %}
+          <div class="google-rating-summary">
+            <strong>{{ google_rating }}</strong>
+            <span class="google-rating-stars">★★★★★</span>
+            {% if google_rating_count %}<span>{{ google_rating_count }} відгуків</span>{% endif %}
+          </div>
+          {% if google_last_sync %}<p class="google-sync-note">Оновлено {{ google_last_sync|date:"d.m.Y H:i" }}</p>{% endif %}
+        {% else %}
+          <p class="google-pending-copy">Ми вже підготували автоматичну синхронізацію з Google Business Profile. Після схвалення API тут з’являться актуальний рейтинг, кількість оцінок та відгуки пацієнтів із Google.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if google_reviews %}
+      <div class="row">
+        {% for review in google_reviews %}
+          <div class="col-lg-4 col-md-6 mb-4">
+            <article class="google-review-card">
+              <div class="google-stars">{{ review.stars }} <span>{{ review.star_rating }}/5</span></div>
+              {% if review.comment %}<p>{{ review.comment|truncatechars:300 }}</p>{% else %}<p class="google-review-empty">Оцінка без текстового коментаря.</p>{% endif %}
+              <div class="google-review-author">{{ review.reviewer_name }}<small>{% if review.create_time %}{{ review.create_time|date:"d.m.Y" }}{% endif %}</small></div>
+              <span class="google-source">Google</span>
+            </article>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="google-about-placeholder">
+        <div class="google-placeholder-icon">G</div>
+        <div>
+          <strong>Google-відгуки готуються до автоматичного підключення</strong>
+          <p>Сайт уже має локальну базу для щоденної синхронізації відгуків і статистики.</p>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="text-center mt-4">
+      <a href="{% url 'google_reviews' %}" class="btn btn-primary px-4 py-3">Усі Google-відгуки</a>
+      {% if google_maps_uri %}<a href="{{ google_maps_uri }}" target="_blank" rel="noopener" class="btn btn-outline-primary px-4 py-3 ml-2">Відкрити Google</a>{% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

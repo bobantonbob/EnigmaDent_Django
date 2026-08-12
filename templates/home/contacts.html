@@ -1,0 +1,66 @@
+{% extends '_layouts/base.html' %}{% load static %}{% block content %}
+<section class="page-hero" style="background-image:url('{% static 'enigma/images/bg_3.jpg' %}');">
+  <div class="container">
+    <p class="enigma-hero-kicker">КОНТАКТИ</p>
+    <h1>Зв’яжіться з Enigma Dent.</h1>
+    <p>Телефонуйте, пишіть у Telegram або залишайте заявку онлайн.</p>
+  </div>
+</section>
+
+<section class="ftco-section enigma-contacts-section">
+  <div class="container">
+    <div class="row enigma-contact-grid">
+      <div class="col-lg-3 col-6 mb-3">
+        <div class="contact-tile h-100">
+          <div class="icon"><span class="icon-phone"></span></div>
+          <h3>Телефон</h3>
+          <p>+38 (066) 209-04-09</p>
+          <a href="tel:+380662090409">Зателефонувати →</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6 mb-3">
+        <div class="contact-tile h-100">
+          <div class="icon"><span class="icon-map-marker"></span></div>
+          <h3>Адреса</h3>
+          <p>вул. Данила Щербаківського, 72<br>Київ</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=%D0%94%D0%B0%D0%BD%D0%B8%D0%BB%D0%B0+%D0%A9%D0%B5%D1%80%D0%B1%D0%B0%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE+72+%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">Прокласти маршрут →</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6 mb-3">
+        <div class="contact-tile h-100">
+          <div class="icon"><span class="icon-paper-plane"></span></div>
+          <h3>Telegram</h3>
+          <p>@enigmadent</p>
+          <a href="https://t.me/enigmadent" target="_blank" rel="noopener">Написати →</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6 mb-3">
+        <div class="contact-tile contact-tile--accent h-100">
+          <div class="icon"><span class="icon-calendar"></span></div>
+          <h3>Онлайн-запис</h3>
+          <p>Залиште заявку — ми зв’яжемося з вами для підтвердження.</p>
+          <a href="{% url 'create' %}">Записатися →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="enigma-map-card enigma-map-card--full mt-4">
+      <div class="enigma-map-copy">
+        <p class="enigma-hero-kicker mb-2">ЯК НАС ЗНАЙТИ</p>
+        <h2>Enigma Dent на карті</h2>
+        <p><span class="icon-map-marker mr-2"></span>вул. Данила Щербаківського, 72, Київ</p>
+        <p><span class="icon-phone mr-2"></span><a href="tel:+380662090409">+38 (066) 209-04-09</a></p>
+      </div>
+      <div class="enigma-map-frame">
+        <iframe
+          title="Enigma Dent — вул. Данила Щербаківського, 72, Київ"
+          src="https://www.google.com/maps?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%94%D0%B0%D0%BD%D0%B8%D0%BB%D0%B0+%D0%A9%D0%B5%D1%80%D0%B1%D0%B0%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE+72,+%D0%9A%D0%B8%D1%97%D0%B2&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

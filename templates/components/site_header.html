@@ -1,0 +1,44 @@
+<header class="site-header" data-header>
+    <div class="container header-inner">
+        <a class="brand" href="{% url 'home' %}" aria-label="Enigma Dent — на головну">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img"><path d="M16.7 6.8c3.3-1.7 5.2-.3 7.3-.3s4-1.4 7.3.3c5.1 2.7 7 9.7 4.3 16.4-1.3 3.1-3.4 5.8-4.5 9.5-1.4 4.7-1.7 8.5-4 8.5-2.4 0-2.2-5.3-3.1-9.2-.9 3.9-.7 9.2-3.1 9.2-2.3 0-2.6-3.8-4-8.5-1.1-3.7-3.2-6.4-4.5-9.5-2.7-6.7-.8-13.7 4.3-16.4Z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 13.5c2.4 1.3 5.6 1.3 8 0" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg>
+            </span>
+            <span class="brand-copy"><strong>ENIGMA</strong><span>DENT</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Головна навігація">
+            <a href="{% url 'home' %}" {% if request.path == '/' %}class="active"{% endif %}>Головна</a>
+            <a href="{% url 'departments' %}" {% if '/departments' in request.path and 'create' not in request.path %}class="active"{% endif %}>Послуги</a>
+            <a href="{% url 'prices' %}" {% if '/prices' in request.path %}class="active"{% endif %}>Ціни</a>
+            <a href="{% url 'about' %}" {% if '/about' in request.path %}class="active"{% endif %}>Про нас</a>
+            <a href="{% url 'contacts' %}" {% if '/contacts' in request.path %}class="active"{% endif %}>Контакти</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="header-phone" href="tel:+380662090409" aria-label="Подзвонити в Enigma Dent">+38 066 209 04 09</a>
+            <a class="btn btn-primary btn-sm" href="{% url 'create' %}">Записатися</a>
+            <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" data-menu-toggle>
+                <span></span><span></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-menu" data-mobile-menu>
+        <div class="container mobile-menu-inner">
+            <nav aria-label="Мобільна навігація">
+                <a href="{% url 'home' %}">Головна</a>
+                <a href="{% url 'departments' %}">Послуги</a>
+                <a href="{% url 'prices' %}">Ціни</a>
+                <a href="{% url 'about' %}">Про нас</a>
+                <a href="{% url 'contacts' %}">Контакти</a>
+            </nav>
+            <div class="mobile-menu-contact">
+                <p>Київ, вул. Данила Щербаківського, 72</p>
+                <a href="tel:+380662090409">+38 066 209 04 09</a>
+                <a href="https://t.me/enigmadent" target="_blank" rel="noopener">Telegram @enigmadent</a>
+            </div>
+            <a class="btn btn-primary btn-block" href="{% url 'create' %}">Записатися на прийом</a>
+        </div>
+    </div>
+</header>

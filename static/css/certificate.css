@@ -1,0 +1,35 @@
+.container_certificate {
+  background-color: #BCB7C1; /* Додаємо фон галереї */
+  padding: 20px; /* Додаємо відступи */
+}
+
+.materialboxed {
+  border-radius: 20px; /* Додаємо закруглення для зображень */
+  margin-bottom: 30px; /* Додаємо вертикальний відступ між зображеннями */
+  transition: transform 0.3s ease, z-index 0s 0.3s;
+}
+
+.row.cer {
+  margin-bottom: 30px; /* Збільшуємо відступ між рядками */
+}
+
+@media only screen and (max-width: 600px) {
+  .col.s4 {
+    flex: 0 0 100%; /* При зменшенні екрану, зробимо кожен елемент на повну ширину */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}
+
+/* Додаємо анімацію для зображень при наведенні */
+.materialboxed:hover {
+  transform: scale(1.1); /* Збільшуємо зображення на 10% при наведенні */
+  transition: transform 0.3s ease; /* Додаємо плавний перехід на збільшення */
+  z-index: 1;
+}
+
+/* Оточення зображення сірим коліром при виборі */
+.materialboxed:focus {
+  outline: 4px solid #ccc;
+  outline-offset: 10px;
+}

@@ -1,0 +1,115 @@
+:root {
+    --enigma-green: #006400;
+    --enigma-green-2: #0a7a36;
+    --enigma-mint: #eef8f1;
+    --enigma-text: #1f2a24;
+    --enigma-muted: #6d776f;
+    --enigma-border: #dce8df;
+    --enigma-white: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+body { color: var(--enigma-text); }
+
+.header-top .row { max-width: 100% !important; width: auto !important; }
+.header-area { box-shadow: 0 8px 30px rgba(17, 62, 33, .06); }
+.header-top a { transition: color .2s ease; }
+.header-top a:hover { color: var(--enigma-green-2) !important; }
+
+.nav-booking a {
+    background: var(--enigma-green) !important;
+    color: #fff !important;
+    padding: 9px 18px !important;
+    border-radius: 999px;
+    margin-left: 8px;
+}
+
+.modern-section {
+    padding: 70px 0;
+    background: linear-gradient(180deg, #fff 0%, var(--enigma-mint) 100%);
+}
+
+.modern-form-card {
+    display: grid;
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+    border: 1px solid var(--enigma-border);
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 22px 60px rgba(31, 70, 44, .10);
+}
+
+.modern-form-copy {
+    padding: 52px;
+    color: #fff;
+    background: linear-gradient(145deg, #004c20 0%, #087238 65%, #14904c 100%);
+    position: relative;
+}
+.modern-form-copy:after {
+    content: "";
+    position: absolute;
+    width: 220px; height: 220px; border-radius: 50%;
+    right: -90px; bottom: -90px;
+    border: 38px solid rgba(255,255,255,.06);
+}
+.modern-form-copy h2 { color: #fff; font-size: 38px; line-height: 1.15; margin: 10px 0 18px; }
+.modern-form-copy p { color: rgba(255,255,255,.82); font-size: 16px; line-height: 1.8; }
+.eyebrow { font-size: 12px; letter-spacing: .16em; font-weight: 700; color: #baf3ca; }
+
+.quick-contact-list { margin-top: 30px; display: grid; gap: 12px; }
+.quick-contact-list a { color: #fff; text-decoration: none; }
+.quick-contact-list i { width: 24px; color: #baf3ca; }
+
+.modern-form-panel { padding: 48px; }
+.modern-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.modern-field { margin-bottom: 18px; }
+.modern-field label { display: block; margin-bottom: 8px; font-weight: 700; color: #304638; }
+.modern-field small { color: var(--enigma-muted); font-weight: 400; }
+
+.modern-input, .modern-textarea, .modern-file {
+    width: 100%;
+    border: 1px solid var(--enigma-border);
+    border-radius: 12px;
+    background: #fbfdfb;
+    padding: 13px 15px;
+    color: var(--enigma-text);
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.modern-input:focus, .modern-textarea:focus {
+    border-color: #5eb77b;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(26, 130, 64, .10);
+}
+.modern-textarea { resize: vertical; min-height: 120px; }
+
+.consent-row { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 22px; color: var(--enigma-muted); line-height: 1.5; }
+.modern-checkbox { margin-top: 4px; accent-color: var(--enigma-green); }
+
+.modern-submit {
+    border: 0;
+    border-radius: 999px;
+    background: var(--enigma-green);
+    color: #fff;
+    padding: 14px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.modern-submit:hover { background: #087a35; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(0,100,0,.20); }
+.modern-submit i { margin-left: 8px; }
+.form-note { margin: 14px 0 0; color: var(--enigma-muted); font-size: 12px; }
+
+.modern-alert { padding: 13px 16px; border-radius: 12px; margin-bottom: 18px; }
+.modern-alert.success { background: #eaf8ef; color: #176332; border: 1px solid #cdebd7; }
+.errorlist { list-style: none; padding: 6px 0 0; margin: 0; color: #b42318; font-size: 13px; }
+
+.single-column-card { grid-template-columns: .7fr 1.3fr; }
+
+@media (max-width: 991px) {
+    .modern-form-card, .single-column-card { grid-template-columns: 1fr; }
+    .modern-form-copy, .modern-form-panel { padding: 32px; }
+    .modern-grid-2 { grid-template-columns: 1fr; gap: 0; }
+    .modern-form-copy h2 { font-size: 32px; }
+    .nav-booking a { margin-left: 0; }
+}

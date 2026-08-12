@@ -1,0 +1,51 @@
+{% extends '_layouts/base.html' %}
+{% load static %}
+{% block content %}
+<section class="page-hero document-hero" style="background-image:url('{% static 'enigma/images/bg_2.jpg' %}');">
+  <div class="container">
+    <p class="enigma-hero-kicker">ПРОФЕСІЙНИЙ РОЗВИТОК</p>
+    <h1>Сертифікати</h1>
+    <p>Навчання, професійні курси та підтвердження кваліфікації команди Enigma Dent.</p>
+  </div>
+</section>
+
+<section class="ftco-section certificate-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 text-center">
+        <span class="document-eyebrow">НАВЧАЄМОСЯ ПОСТІЙНО</span>
+        <h2 class="document-title">Професійні сертифікати Enigma Dent</h2>
+        <p class="document-lead">Тут ми зберігаємо підтвердження навчання та підвищення кваліфікації. Натисніть на будь-який сертифікат, щоб переглянути його детальніше.</p>
+      </div>
+    </div>
+
+    <div class="certificate-grid">
+      {% if certificates %}
+        {% for certificate in certificates %}
+        <a href="{{ certificate.image.url }}" class="certificate-card image-lightbox" data-caption="{{ certificate.title }}">
+          <div class="certificate-image-wrap">
+            <img src="{{ certificate.image.url }}" alt="{{ certificate.title }}" loading="lazy">
+            <span class="certificate-overlay"><span class="icon-search"></span> Переглянути</span>
+          </div>
+          <div class="certificate-meta">
+            <span>Enigma Dent</span>
+          </div>
+        </a>
+        {% endfor %}
+      {% else %}
+        {% for filename in certificate_files %}
+        <a href="{% static 'enigma/images/elements/' %}{{ filename }}" class="certificate-card image-lightbox" data-caption="Сертифікат Enigma Dent">
+          <div class="certificate-image-wrap">
+            <img src="{% static 'enigma/images/elements/' %}{{ filename }}" alt="Сертифікат Enigma Dent {{ forloop.counter }}" loading="lazy">
+            <span class="certificate-overlay"><span class="icon-search"></span> Переглянути</span>
+          </div>
+          <div class="certificate-meta">
+            <span>Enigma Dent</span>
+          </div>
+        </a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends '_layouts/base.html' %}
+{% load static %}
+{% block content %}
+<section class="page-hero document-hero" style="background-image:url('{% static 'enigma/images/bg_3.jpg' %}');">
+  <div class="container">
+    <p class="enigma-hero-kicker">ДОКУМЕНТИ ENIGMA DENT</p>
+    <h1>Ліцензія на медичну практику</h1>
+    <p>Офіційний документ, що підтверджує право Enigma Dent на провадження медичної практики.</p>
+  </div>
+</section>
+
+<section class="ftco-section document-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 text-center">
+        <span class="document-eyebrow">ВІДКРИТА ІНФОРМАЦІЯ</span>
+        <h2 class="document-title">Документ можна переглянути у повному розмірі</h2>
+        <p class="document-lead">Натисніть на зображення ліцензії, щоб відкрити його у збільшеному вигляді.</p>
+      </div>
+    </div>
+
+    <div class="document-viewer-card">
+      <a href="{% static 'enigma/images/license.jpg' %}" class="image-lightbox" data-caption="Ліцензія Enigma Dent">
+        <img src="{% static 'enigma/images/license.jpg' %}" alt="Ліцензія Enigma Dent на медичну практику" class="document-image" loading="lazy">
+        <span class="document-zoom"><span class="icon-search"></span> Збільшити документ</span>
+      </a>
+    </div>
+
+    <div class="document-note mt-4">
+      <span class="icon-check-circle"></span>
+      <div><strong>Enigma Dent</strong><p class="mb-0">Стоматологічна допомога та медична практика відповідно до чинних документів закладу.</p></div>
+    </div>
+  </div>
+</section>
+{% endblock %}

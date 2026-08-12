@@ -1,0 +1,16 @@
+{% extends '_layouts/base.html' %}{% load static %}{% block content %}
+<section class="page-hero" style="background-image:url('{% static 'enigma/images/bg_1.jpg' %}');"><div class="container"><p class="enigma-hero-kicker">ОНЛАЙН-ЗАПИС</p><h1>Залиште заявку.</h1><p>Контактні дані та запит збережуться в системі Enigma Dent і будуть доступні адміністратору.</p></div></section>
+<section class="enigma-content" style="background:#f7faf9"><div class="container"><div class="enigma-form-card"><div class="heading-section text-center mb-4"><span class="subheading">ENIGMA DENT</span><h2>Запис на прийом</h2><p>Поля зі знаком * обов’язкові.</p></div><form method="post" novalidate>{% csrf_token %}
+<div class="row"><div class="col-md-6 form-group"><label>Ім’я *</label>{{ form.title }}{{ form.title.errors }}</div><div class="col-md-6 form-group"><label>Телефон *</label>{{ form.phone }}{{ form.phone.errors }}</div></div>
+<div class="row"><div class="col-md-6 form-group"><label>Email</label>{{ form.email }}{{ form.email.errors }}</div><div class="col-md-6 form-group"><label>Бажаний час</label>{{ form.preferred_time }}{{ form.preferred_time.errors }}</div></div>
+<div class="form-group"><label>Послуга / причина звернення *</label>{{ form.about }}{{ form.about.errors }}</div><div class="form-group"><label>Повідомлення</label>{{ form.message }}{{ form.message.errors }}</div>
+<div class="form-group d-flex align-items-start"><div class="mr-2">{{ form.consent }}</div><label for="{{ form.consent.id_for_label }}" style="font-weight:400">{{ form.consent.label }}</label>{{ form.consent.errors }}</div>
+<button class="btn btn-primary btn-block py-3" type="submit">Надіслати заявку</button></form>
+<div class="booking-alt-contact">
+  <div class="booking-alt-divider"><span>або</span></div>
+  <a class="booking-telegram-btn" href="https://t.me/enigmadent" target="_blank" rel="noopener">
+    <span class="icon-paper-plane"></span>
+    <span>Написати в Telegram</span>
+  </a>
+</div></div></div></section>
+{% endblock %}

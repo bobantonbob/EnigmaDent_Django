@@ -1,0 +1,168 @@
+{% extends '_layouts/base.html' %}
+{% load static %}
+{% block content %}
+<section class="home-slider owl-carousel">
+  <div class="slider-item" style="background-image:url('{% static 'enigma/images/bg_1.jpg' %}');">
+    <div class="container">
+      <div class="row slider-text align-items-center" data-scrollax-parent="true">
+        <div class="col-md-7 col-sm-12 ftco-animate">
+          <p class="enigma-hero-kicker">ENIGMA DENT · СТОМАТОЛОГІЯ У КИЄВІ</p>
+          <h1 class="mb-4">Лікування, яке зрозуміле пацієнту.</h1>
+          <p class="mb-4">Терапевтична стоматологія, пародонтологія та ортопедичне відновлення — з прозорим планом дій і сучасним підходом.</p>
+          <p class="enigma-hero-actions"><a href="{% url 'create' %}" class="btn btn-primary px-4 py-3">Записатися на прийом</a><a href="https://t.me/enigmadent" target="_blank" rel="noopener" class="btn btn-ghost px-4 py-3">Написати в Telegram</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slider-item" style="background-image:url('{% static 'enigma/images/bg_2.jpg' %}');">
+    <div class="container">
+      <div class="row slider-text align-items-center">
+        <div class="col-md-7 col-sm-12 ftco-animate">
+          <p class="enigma-hero-kicker">ENIGMA DENT · БЕРЕЖНЕ ВІДНОВЛЕННЯ</p>
+          <h1 class="mb-4">Здорові зуби. Природна естетика. Без зайвого.</h1>
+          <p class="mb-4">Від консультації та професійної гігієни до реставрацій, коронок і протезування.</p>
+          <p class="enigma-hero-actions"><a href="{% url 'departments' %}" class="btn btn-primary px-4 py-3">Переглянути послуги</a><a href="{% url 'prices' %}" class="btn btn-ghost px-4 py-3">Переглянути ціни</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-intro">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-md-3 color-1 p-4">
+        <h3 class="mb-4">Швидкий зв'язок</h3>
+        <p>Напишіть нам у Telegram — це найзручніший спосіб уточнити питання перед записом.</p>
+        <a class="telegram-quick-btn" href="https://t.me/enigmadent" target="_blank" rel="noopener"><span class="icon-paper-plane"></span><span>Написати в Telegram</span></a>
+      </div>
+      <div class="col-md-3 color-2 p-4">
+        <h3 class="mb-4">Напрями</h3>
+        <div class="enigma-direction-list">
+          <a href="{% url 'therapeutic' %}" class="enigma-direction-link"><span>Терапія</span><span class="icon-arrow-right"></span></a>
+          <a href="{% url 'periodontology' %}" class="enigma-direction-link"><span>Пародонтологія</span><span class="icon-arrow-right"></span></a>
+          <a href="{% url 'orthopedic' %}" class="enigma-direction-link"><span>Ортопедія</span><span class="icon-arrow-right"></span></a>
+        </div>
+      </div>
+      <div class="col-md-6 color-3 p-4">
+        <h3 class="mb-2">Запис на консультацію</h3>
+        <p class="mb-3">Залиште основні дані — заявка збережеться в системі Enigma Dent.</p>
+        <form action="{% url 'create' %}" method="post" class="appointment-form">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-sm-6"><div class="form-group"><input name="title" type="text" class="form-control" placeholder="Ваше ім’я" required></div></div>
+            <div class="col-sm-6"><div class="form-group"><input name="phone" type="text" class="form-control" placeholder="Телефон" required></div></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-7"><div class="form-group"><input name="about" type="text" class="form-control" placeholder="Що вас турбує / яка послуга" required></div></div>
+            <div class="col-sm-5"><div class="form-group"><input name="preferred_time" type="text" class="form-control" placeholder="Коли зручно"></div></div>
+          </div>
+          <input type="hidden" name="email" value=""><input type="hidden" name="message" value="Заявка з головної сторінки">
+          <label class="consent-row"><input type="checkbox" name="consent" required><span>Погоджуюсь на обробку персональних даних для зв’язку та запису.</span></label>
+          <div class="form-group mt-3"><button type="submit" class="btn btn-light px-4 py-2">Надіслати заявку</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section ftco-services">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-8 text-center heading-section ftco-animate">
+        <span class="subheading">Основні напрями</span>
+        <h2 class="mb-3">Стоматологія без перевантаженого меню</h2>
+        <p>Ми зібрали ключові послуги у три зрозумілі напрями. Усередині — конкретні процедури та актуальний прайс.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 d-flex ftco-animate mb-4"><div class="media block-6 services d-block text-center enigma-service-card"><div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-tooth"></span></div><div class="media-body p-2 mt-3"><h3 class="heading">Терапевтична стоматологія</h3><p>Карієс, фотополімерні реставрації, лікування каналів, невідкладна допомога та профілактика.</p><a class="service-link" href="{% url 'therapeutic' %}">Детальніше →</a></div></div></div>
+      <div class="col-md-4 d-flex ftco-animate mb-4"><div class="media block-6 services d-block text-center enigma-service-card"><div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-dental-care"></span></div><div class="media-body p-2 mt-3"><h3 class="heading">Пародонтологія</h3><p>Професійна гігієна, ясна, Vector-терапія, шинування, чистка та відбілювання.</p><a class="service-link" href="{% url 'periodontology' %}">Детальніше →</a></div></div></div>
+      <div class="col-md-4 d-flex ftco-animate mb-4"><div class="media block-6 services d-block text-center enigma-service-card"><div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-tooth-1"></span></div><div class="media-body p-2 mt-3"><h3 class="heading">Ортопедична стоматологія</h3><p>Коронки, E-max, цирконій, вкладки, капи, знімне протезування та ремонт конструкцій.</p><a class="service-link" href="{% url 'orthopedic' %}">Детальніше →</a></div></div></div>
+    </div>
+  </div>
+  <div class="container-wrap mt-5">
+    <div class="row d-flex no-gutters">
+      <div class="col-md-6 img" style="background-image:url('{% static 'enigma/images/about-2.jpg' %}');"></div>
+      <div class="col-md-6 d-flex"><div class="about-wrap">
+        <div class="heading-section heading-section-white mb-5 ftco-animate"><span class="subheading">Підхід Enigma Dent</span><h2 class="mb-2">Не просто «полікувати зуб», а зрозуміти задачу.</h2><p>На сайті залишаємо тільки те, що реально допомагає пацієнту прийняти рішення: напрям лікування, орієнтовна вартість і простий спосіб зв’язатися.</p></div>
+        <div class="list-services d-flex ftco-animate"><div class="icon d-flex justify-content-center align-items-center"><span class="icon-check2"></span></div><div class="text"><h3>Зрозумілий план</h3><p>Спочатку визначаємо проблему та пояснюємо варіанти лікування.</p></div></div>
+        <div class="list-services d-flex ftco-animate"><div class="icon d-flex justify-content-center align-items-center"><span class="icon-check2"></span></div><div class="text"><h3>Прозорі ціни</h3><p>Прайс відкритий для перегляду й керується через Django Admin — ціни можна змінювати без редагування коду.</p></div></div>
+        <div class="list-services d-flex ftco-animate"><div class="icon d-flex justify-content-center align-items-center"><span class="icon-check2"></span></div><div class="text"><h3>Швидкий контакт</h3><p>Форма запису зберігається в Django Admin і може дублюватися адміністратору в Telegram.</p></div></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section seo-home-section"><div class="container"><div class="row align-items-center"><div class="col-lg-7"><span class="subheading">Enigma Dent у Києві</span><h2>Стоматологія у Києві: послуги, ціни та запис</h2><p>На окремій сторінці ми зібрали головні стоматологічні напрями, типові причини звернення, посилання на повний прайс і контактні дані кабінету. Це допомагає швидко знайти потрібну процедуру без перегляду десятків сторінок.</p><a href="{% url 'dentistry_kyiv' %}" class="btn btn-primary px-4 py-3">Усі стоматологічні послуги</a></div><div class="col-lg-5"><div class="seo-home-points"><div><strong>Терапія</strong><span>карієс · реставрації · канали</span></div><div><strong>Пародонтологія</strong><span>чистка · ясна · Vector</span></div><div><strong>Ортопедія</strong><span>коронки · E-max · цирконій · протези</span></div></div></div></div></div></section>
+<section class="ftco-section enigma-price-preview">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3"><div class="col-md-8 text-center heading-section ftco-animate"><span class="subheading">Актуальні ціни</span><h2 class="mb-3">Орієнтири до консультації</h2><p>Нижче — кілька позицій із діючих прайсів. Повний прайс розбитий за напрямами.</p></div></div>
+    <div class="row">
+      <div class="col-md-4 ftco-animate mb-4"><div class="pricing-entry active text-center price-hover-card"><div class="price-card-content"><div><h3 class="mb-4">Терапія</h3><p><span class="price">актуальний прайс</span></p></div><ul><li>Фотополімерне відновлення — {% if therapy_restore %}{{ therapy_restore.display_price }}{% else %}1700 грн{% endif %}</li><li>Реставрація фронтальних зубів — {% if therapy_front %}{{ therapy_front.display_price }}{% else %}2900 грн{% endif %}</li><li>Фторування, 1 щелепа — {% if therapy_fluoride %}{{ therapy_fluoride.display_price }}{% else %}700 грн{% endif %}</li></ul></div><a href="{% url 'prices' %}#therapy" class="price-card-overlay" aria-label="Відкрити прайс терапії"><span>Прайс терапії</span><small>Дивитися всі ціни →</small></a></div></div>
+      <div class="col-md-4 ftco-animate mb-4"><div class="pricing-entry text-center price-hover-card"><div class="price-card-content"><div><h3 class="mb-4">Пародонтологія</h3><p><span class="price">актуальний прайс</span></p></div><ul><li>Ультразвукова чистка I рівень — {% if perio_clean %}{{ perio_clean.display_price }}{% else %}950 грн{% endif %}</li><li>Відбілювання Opalescence — {% if perio_whitening %}{{ perio_whitening.display_price }}{% else %}6000 грн{% endif %}</li><li>Vector, 2 щелепи, 1 сеанс — {% if perio_vector %}{{ perio_vector.display_price }}{% else %}6500 грн{% endif %}</li></ul></div><a href="{% url 'prices' %}#periodontology" class="price-card-overlay" aria-label="Відкрити прайс пародонтології"><span>Прайс пародонтології</span><small>Дивитися всі ціни →</small></a></div></div>
+      <div class="col-md-4 ftco-animate mb-4"><div class="pricing-entry text-center price-hover-card"><div class="price-card-content"><div><h3 class="mb-4">Ортопедія</h3><p><span class="price">актуальний прайс</span></p></div><ul><li>Металокерамічна коронка — {% if ortho_metal %}{{ ortho_metal.display_price }}{% else %}4500 грн{% endif %}</li><li>Безметалева кераміка E-max — {% if ortho_emax %}{{ ortho_emax.display_price }}{% else %}10000 грн{% endif %}</li><li>Цирконієва коронка на імпланті — {% if ortho_implant %}{{ ortho_implant.display_price }}{% else %}20000 грн{% endif %}</li></ul></div><a href="{% url 'prices' %}#orthopedics" class="price-card-overlay" aria-label="Відкрити прайс ортопедії"><span>Прайс ортопедії</span><small>Дивитися всі ціни →</small></a></div></div>
+    </div>
+  </div>
+</section>
+
+{% if reviews %}
+<section class="ftco-section testimony-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3"><div class="col-md-7 text-center heading-section ftco-animate"><span class="subheading">Відгуки</span><h2 class="mb-2">Що пишуть пацієнти</h2></div></div>
+    <div class="row justify-content-center ftco-animate"><div class="col-md-9"><div class="carousel-testimony owl-carousel ftco-owl">
+      {% for review in reviews %}<div class="item"><div class="testimony-wrap p-4 pb-5">{% if review.image %}<div class="user-img mb-5" style="background-image:url('{{ review.image.url }}')"><span class="quote d-flex align-items-center justify-content-center"><i class="icon-quote-left"></i></span></div>{% else %}<div class="enigma-review-no-image"><span class="icon-quote-left"></span></div>{% endif %}<div class="text text-center"><p class="mb-5">{{ review.response }}</p><p class="name">{{ review.name }}</p><span class="position">Відгук пацієнта</span></div></div></div>{% endfor %}
+    </div></div></div>
+    <div class="text-center mt-4"><a href="{% url 'response_create' %}" class="btn btn-primary px-4 py-3">Залишити відгук</a></div>
+  </div>
+</section>
+{% endif %}
+
+<section class="ftco-gallery enigma-gallery">
+  <div class="container-wrap"><div class="row no-gutters">
+    <div class="col-md-3 ftco-animate"><div class="gallery img" style="background-image:url('{% static 'enigma/images/gallery-1.jpg' %}');"></div></div>
+    <div class="col-md-3 ftco-animate"><div class="gallery img" style="background-image:url('{% static 'enigma/images/gallery-2.jpg' %}');"></div></div>
+    <div class="col-md-3 ftco-animate"><div class="gallery img" style="background-image:url('{% static 'enigma/images/gallery-3.jpg' %}');"></div></div>
+    <div class="col-md-3 ftco-animate"><div class="gallery img" style="background-image:url('{% static 'enigma/images/gallery-4.jpg' %}');"></div></div>
+  </div></div>
+</section>
+
+<section class="ftco-section google-reviews-section">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-8 text-center heading-section">
+        <span class="subheading">Довіра пацієнтів</span>
+        <h2>Відгуки Enigma Dent у Google</h2>
+        {% if google_rating %}
+          <div class="google-rating-summary"><strong>{{ google_rating }}</strong><span class="google-rating-stars">★★★★★</span>{% if google_rating_count %}<span>{{ google_rating_count }} відгуків</span>{% endif %}</div>
+        {% else %}
+          <p>Google Business Profile API готується до підключення. Після схвалення відгуки автоматично синхронізуватимуться з Google один раз на добу.</p>
+        {% endif %}
+      </div>
+    </div>
+    {% if google_reviews %}
+      <div class="row">
+        {% for review in google_reviews %}
+          <div class="col-lg-4 mb-4">
+            <article class="google-review-card">
+              <div class="google-stars">{{ review.stars }} <span>{{ review.star_rating }}/5</span></div>
+              {% if review.comment %}<p>{{ review.comment|truncatechars:360 }}</p>{% else %}<p class="google-review-empty">Оцінка без текстового коментаря.</p>{% endif %}
+              <div class="google-review-author">{{ review.reviewer_name }}<small>{% if review.create_time %}{{ review.create_time|date:"d.m.Y" }}{% endif %}</small></div>
+              <span class="google-source">Google</span>
+            </article>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="text-center mt-3">
+        <a href="{% url 'google_reviews' %}" class="btn btn-primary px-4 py-3">Усі відгуки</a>
+        {% if google_maps_uri %}<a href="{{ google_maps_uri }}" target="_blank" rel="noopener" class="btn btn-outline-primary px-4 py-3 ml-2">Залишити відгук у Google</a>{% endif %}
+      </div>
+    {% else %}
+      <div class="text-center">
+        <a href="{% url 'google_reviews' %}" class="btn btn-outline-primary px-4 py-3">Сторінка відгуків</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+<section class="enigma-cta"><div class="container"><div class="row align-items-center"><div class="col-md-8"><h2>Потрібна консультація?</h2><p class="mb-md-0">Залиште заявку на сайті або напишіть безпосередньо в Telegram.</p></div><div class="col-md-4 text-md-right mt-4 mt-md-0"><a href="{% url 'create' %}" class="btn btn-light px-4 py-3 mr-2">Записатися</a><a href="https://t.me/enigmadent" target="_blank" rel="noopener" class="btn btn-outline-light px-4 py-3">Telegram</a></div></div></div></section>
+{% endblock %}

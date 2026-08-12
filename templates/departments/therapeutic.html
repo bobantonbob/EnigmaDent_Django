@@ -1,0 +1,265 @@
+{% extends '_layouts/base.html' %}
+
+{% block content %}
+{% load static %}
+
+{% include '_fragments/Banner Area End.html' %}
+
+<div>
+    <div class="whole-wrap">
+        <div class="container">
+            <div class="section-top-border">
+                <div class="progress-table-wrap">
+                    <p class="country">Прайс від 04.10.2024</p>
+                    <p class="country"><a style="color: #008000;" href="{% static 'file/Терапевтія-04.10.2024.pdf' %}"
+                                          download>Завантажити прайс </a></p>
+                    <ul class="progress-table">
+                        <li class="table-head" style="background-color: #FFEBCD">
+                            <p class="serial">№</p>
+                            <p class="country">Найменування послуг</p>
+                            <p class="visit">Вартість</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial"></p>
+                            <p class="country">Консультація --- безкоштовно</p>
+                            <p class="visit"></p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">101</p>
+                            <p class="country">Консультація з призначенням медикаментів</p>
+                            <p class="visit">200 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">102</p>
+                            <p class="country">Анестезія : інфільтраційна</p>
+                            <p class="visit">300 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">103</p>
+                            <p class="country">Анестезія : провідникова</p>
+                            <p class="visit">300 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">103</p>
+                            <p class="country">Анестезія : провідникова</p>
+                            <p class="visit">300 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">104</p>
+                            <p class="country">Анестезія : додаткова карпула</p>
+                            <p class="visit">150 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">105</p>
+                            <p class="country">Анестезія : аплікаційна</p>
+                            <p class="visit">100 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">106</p>
+                            <p class="country">Швидка допомога при періодонтиті в однокореневому зубі</p>
+                            <p class="visit">1000 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">107</p>
+                            <p class="country">Швидка допомога при періодонтиті в багато кореневому зубі</p>
+                            <p class="visit">1300 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">108</p>
+                            <p class="country">Роторозширювач Optra Gate</p>
+                            <p class="visit">150 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">109</p>
+                            <p class="country">Зняття пломби</p>
+                            <p class="visit">100 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">110</p>
+                            <p class="country">Іррігація кореневого канала</p>
+                            <p class="visit">70</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">111</p>
+                            <p class="country">Пломба під коронку : I рівень</p>
+                            <p class="visit">800 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">112</p>
+                            <p class="country">Пломба під коронку : II рівень</p>
+                            <p class="visit">900 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">113</p>
+                            <p class="country">Пломба під коронку : III рівень</p>
+                            <p class="visit">1000 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">114</p>
+                            <p class="country">Відновлення зуба фото полімерним матеріалом : I рівень</p>
+                            <p class="visit">1100 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">115</p>
+                            <p class="country">Відновлення зуба фото полімерним матеріалом : II рівень</p>
+                            <p class="visit">1200 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">116</p>
+                            <p class="country">Відновлення зуба фото полімерним матеріалом : III рівень</p>
+                            <p class="visit">1300 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">117</p>
+                            <p class="country">Відновлення, реставрація бокових зубів</p>
+                            <p class="visit">1700 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">118</p>
+                            <p class="country">Відновлення, реставрація фронтальних зубів</p>
+                            <p class="visit">1800 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">119</p>
+                            <p class="country">Адгезивний міст при відсутності одного зуба</p>
+                            <p class="visit">3800 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">120</p>
+                            <p class="country">Розпломбування одного кореневого каналу</p>
+                            <p class="visit">250 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">121</p>
+                            <p class="country">Розпломбування ендомотором</p>
+                            <p class="visit">400 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">122</p>
+                            <p class="country">Розширення кореневого каналу ендомотором</p>
+                            <p class="visit">300 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">123</p>
+                            <p class="country">Інструментальна та медикаментозна обробка : одно канальний зуб</p>
+                            <p class="visit">500 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">124</p>
+                            <p class="country">Інструментальна та медикаментозна обробка : двох канальний зуб</p>
+                            <p class="visit">550 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">125</p>
+                            <p class="country">Інструментальна та медикаментозна обробка : трьох канальний зуб</p>
+                            <p class="visit">600 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">126</p>
+                            <p class="country">Інструментальна та медикаментозна обробка : чотирьох канальний зуб</p>
+                            <p class="visit">650 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">127</p>
+                            <p class="country">Повторна обробка каналу</p>
+                            <p class="visit">100 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">128</p>
+                            <p class="country">Ліки в кореневому каналі</p>
+                            <p class="visit">100 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">129</p>
+                            <p class="country">Пломбування кореневого каналу (склер з гуттаперча)</p>
+                            <p class="visit">400 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">130</p>
+                            <p class="country">Пломбування кореневого каналу кальцій вмісним матеріалом</p>
+                            <p class="visit">350 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">131</p>
+                            <p class="country">Закриття перфорації</p>
+                            <p class="visit">700 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">132</p>
+                            <p class="country">Пломбування скривленого каналу</p>
+                            <p class="visit">500 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">133</p>
+                            <p class="country">Вилучення штифта</p>
+                            <p class="visit">500 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">134</p>
+                            <p class="country">Вилучення вкладки</p>
+                            <p class="visit">700 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">135</p>
+                            <p class="country">Анкерний штифт, фіксація</p>
+                            <p class="visit">500 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">136</p>
+                            <p class="country">Скловолоконний штифт, фіксація</p>
+                            <p class="visit">550 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">137</p>
+                            <p class="country">Замкова матриця</p>
+                            <p class="visit">100 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">138</p>
+                            <p class="country">Накладання девіт пасти</p>
+                            <p class="visit">600 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">139</p>
+                            <p class="country">Матеріал SDR</p>
+                            <p class="visit">200 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">140</p>
+                            <p class="country">Тимчасова пломба</p>div
+                            <p class="visit">100 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">141</p>
+                            <p class="country">Одна ін’єкція мед.препарата</p>
+                            <p class="visit">150 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">142</p>
+                            <p class="country">Одна ін’єкція дексаметазона </p>
+                            <p class="visit">200 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">143</p>
+                            <p class="country">Покриття зуба фтор засобом </p>
+                            <p class="visit">50 грн.</p>
+                        </li>
+                        <li class="table-head" style="background-color: #FFF8DC">
+                            <p class="serial">144</p>
+                            <p class="country">Фторування зубів, 1 щелепа</p>
+                            <p class="visit">400 грн.</p>
+                        </li>
+                        <li class="table-head">
+                            <p class="serial">145</p>
+                            <p class="country">Профілактична полірування реставрації</p>
+                            <p class="visit">150 грн.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

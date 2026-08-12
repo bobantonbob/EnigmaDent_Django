@@ -1,0 +1,9 @@
+{% extends '_layouts/base.html' %}{% load static %}{% block content %}
+<section class="page-hero" style="background-image:url('{% static 'enigma/images/bg_3.jpg' %}');"><div class="container"><p class="enigma-hero-kicker">ENIGMA DENT · ПОСЛУГИ</p><h1>Три основні напрями лікування.</h1><p>Оберіть напрям, щоб переглянути задачі, підхід і перейти до запису.</p></div></section>
+<section class="ftco-section"><div class="container"><div class="row">
+<div class="col-md-4 d-flex mb-4"><div class="enigma-service-card text-center"><div class="icon mb-3"><span class="flaticon-tooth" style="font-size:58px;color:var(--ed-green)"></span></div><h3>Терапія</h3><p>Карієс, реставрації, ендодонтія, невідкладна допомога, профілактика.</p><a class="btn btn-primary" href="{% url 'therapeutic' %}">Переглянути</a></div></div>
+<div class="col-md-4 d-flex mb-4"><div class="enigma-service-card text-center"><div class="icon mb-3"><span class="flaticon-dental-care" style="font-size:58px;color:var(--ed-green)"></span></div><h3>Пародонтологія</h3><p>Професійна гігієна, ясна, шинування, Vector-терапія та відбілювання.</p><a class="btn btn-primary" href="{% url 'periodontology' %}">Переглянути</a></div></div>
+<div class="col-md-4 d-flex mb-4"><div class="enigma-service-card text-center"><div class="icon mb-3"><span class="flaticon-tooth-1" style="font-size:58px;color:var(--ed-green)"></span></div><h3>Ортопедія</h3><p>Коронки, кераміка, цирконій, вкладки, капи та протезування.</p><a class="btn btn-primary" href="{% url 'orthopedic' %}">Переглянути</a></div></div>
+</div></div></section>
+<section class="enigma-cta"><div class="container text-center"><h2>Не знаєте, який напрям потрібен?</h2><p>Опишіть проблему у формі — адміністратор зорієнтує щодо наступного кроку.</p><a href="{% url 'create' %}" class="btn btn-light px-4 py-3">Залишити заявку</a></div></section>
+{% endblock %}

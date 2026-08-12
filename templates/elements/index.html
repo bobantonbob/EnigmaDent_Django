@@ -1,0 +1,107 @@
+{% extends '_layouts/base.html' %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style_gallery.css' %}">
+
+  {% include '_fragments/Banner Area End.html' %}
+
+    <div class="container_gallery">
+
+        <h1 class="name_gallery"></h1>
+
+        <div class="img-container_gallery">
+            <div class="img">
+                <img src="{% static 'images/elements/g1.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g2.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g3.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g4.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g5.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g6.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g7.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g8.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g9.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g10.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g11.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g12.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g13.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g14.jpg' %}" alt="Enigma-Dent">
+            </div>
+            <div class="img">
+                <img src="{% static 'images/elements/g15.jpg' %}" alt="Enigma-Dent">
+            </div>
+        </div>
+        <div class="pop-up">
+            <span>&times;</span>
+            <img class="pop-up-img"  src="{% static 'images/elements/g1.jpg' %}" alt="">
+        </div>
+
+
+    </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Отримання всіх елементів з класом 'img-container_gallery'
+      let imgContainers = document.querySelectorAll('.img-container_gallery .img');
+
+      // Отримання елементів з класом 'pop-up' та 'pop-up img'
+      let popUp = document.querySelector('.pop-up');
+      let popUpImg = document.querySelector('.pop-up-img');
+
+      // Додаємо обробник подій для кожного елемента
+      imgContainers.forEach(container => {
+        let img = container.querySelector('img');
+
+        // Клік по фото для відкриття модального вікна
+        img.onclick = () => {
+          popUpImg.src = img.src;
+          popUp.style.display = 'flex';
+        };
+      });
+
+      // Клік по затемненому фону або хрестику для закриття модального вікна
+      document.querySelector('.pop-up span').onclick = () => {
+        popUp.style.display = 'none';
+      };
+
+      // Клік по затемненому фону або хрестику для закриття модального вікна
+      popUp.onclick = (event) => {
+        if (event.target === popUp) {
+          popUp.style.display = 'none';
+        }
+      };
+    });
+  </script>
+
+
+
+{% endblock content %}
+
+
+
+

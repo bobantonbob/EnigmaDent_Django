@@ -1,0 +1,141 @@
+:root{--ed-green:#0f765f;--ed-green-dark:#0a5142;--ed-mint:#e8f4ef;--ed-warm:#f5eee7;--ed-ink:#17231f;--ed-muted:#6d7773;--ed-white:#fff}
+html{scroll-behavior:smooth}body{font-family:'Open Sans',Arial,sans-serif;color:var(--ed-ink);background:#fff}.enigma-topbar{background:var(--ed-green-dark);color:#dceee8;font-size:13px;padding:8px 0}.enigma-socials a{color:#fff;margin-left:18px;opacity:.9}.enigma-socials a:hover{opacity:1}.ftco-navbar-light{background:#fff!important;box-shadow:0 8px 28px rgba(14,52,43,.08);top:0;position:sticky!important}.ftco-navbar-light .navbar-brand,.enigma-brand{color:var(--ed-ink)!important;font-weight:700;letter-spacing:-1.7px}.enigma-brand span{color:var(--ed-green)}.ftco-navbar-light .navbar-nav>.nav-item>.nav-link{color:#2c3a36;font-weight:600}.ftco-navbar-light .navbar-nav>.nav-item.active>a,.ftco-navbar-light .navbar-nav>.nav-item>a:hover{color:var(--ed-green)!important}.ftco-navbar-light .navbar-nav>.nav-item.cta>a{background:var(--ed-green);border-color:var(--ed-green);border-radius:999px}.ftco-navbar-light .navbar-nav>.nav-item.cta>a span{color:#fff}.btn-primary{background:var(--ed-green)!important;border-color:var(--ed-green)!important}.btn-primary:hover{background:var(--ed-green-dark)!important;border-color:var(--ed-green-dark)!important}.home-slider .slider-item:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,35,29,.62),rgba(5,35,29,.12) 70%,rgba(5,35,29,0));z-index:0}.home-slider .slider-item .container{position:relative;z-index:2}.home-slider .slider-item .slider-text h1{font-size:48px;font-weight:700;line-height:1.06;color:#fff;max-width:700px;text-shadow:0 2px 24px rgba(0,0,0,.15)}.home-slider .slider-item .slider-text p{color:#edf9f5;font-size:18px;max-width:600px}.enigma-hero-kicker{text-transform:uppercase;letter-spacing:2px;font-size:12px!important;font-weight:700;color:#bde4d8!important}.enigma-hero-actions .btn{margin-right:8px;margin-bottom:8px}.btn-ghost{background:#fff;border:1px solid rgba(255,255,255,.75);color:var(--ed-green-dark)}.btn-ghost:hover{background:#f3fbf8;color:var(--ed-green-dark)}.ftco-intro .color-1{background:var(--ed-green-dark)}.ftco-intro .color-2{background:var(--ed-green)}.ftco-intro .color-3{background:#17866d}.ftco-intro h3,.ftco-intro p,.ftco-intro label,.ftco-intro .phone-number{color:#fff}.appointment-form .form-control{border-bottom:1px solid rgba(255,255,255,.55)!important;color:#fff!important}.appointment-form .form-control::placeholder{color:rgba(255,255,255,.88)}.appointment-form .consent-row{display:flex;gap:8px;align-items:flex-start;color:#fff;font-size:12px;line-height:1.4}.appointment-form .consent-row input{margin-top:3px}.heading-section h2{color:var(--ed-ink);font-weight:700}.heading-section .subheading{color:var(--ed-green);font-weight:700;letter-spacing:1px}.services .icon span{color:var(--ed-green)}.services .heading a,.services .heading{color:var(--ed-ink)}.enigma-service-card{padding:24px 18px;border:1px solid #e8efec;border-radius:18px;background:#fff;transition:.25s;height:100%}.enigma-service-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,118,95,.12);border-color:#cbe5dc}.enigma-service-card .icon{height:72px}.enigma-service-card p{color:var(--ed-muted)}.enigma-service-card .service-link{font-weight:700;color:var(--ed-green)}.about-wrap{background:var(--ed-green-dark)!important}.about-wrap .heading-section-white h2,.about-wrap .heading-section-white p,.about-wrap .list-services h3,.about-wrap .list-services p{color:#fff}.about-wrap .list-services .icon{background:#fff}.about-wrap .list-services .icon span{color:var(--ed-green)}.enigma-price-preview{background:#f8fbfa}.pricing-entry{border:1px solid #e4ece9;border-radius:18px;overflow:hidden;background:#fff;box-shadow:none}.pricing-entry.active{border-color:var(--ed-green);box-shadow:0 15px 35px rgba(15,118,95,.12)}.pricing-entry h3{color:var(--ed-ink);font-weight:700}.pricing-entry .price{color:var(--ed-green)!important}.pricing-entry ul li{padding:8px 12px}.testimony-section{background:#f7faf9!important}.testimony-wrap .quote{background:var(--ed-green)!important}.testimony-wrap .name{color:var(--ed-ink);font-weight:700}.enigma-review-no-image{width:80px;height:80px;border-radius:50%;margin:0 auto 24px;background:var(--ed-mint);display:flex;align-items:center;justify-content:center;font-size:30px;color:var(--ed-green)}.enigma-gallery .gallery{min-height:260px}.enigma-cta{background:linear-gradient(135deg,var(--ed-green-dark),var(--ed-green));padding:70px 0;color:#fff}.enigma-cta h2{font-weight:700;color:#fff}.enigma-cta p{color:#e0f2ec}.enigma-cta .btn-light{color:var(--ed-green-dark);font-weight:700}.enigma-footer{background:#10211c!important;padding-bottom:90px}.enigma-footer .footer-brand{color:#fff!important}.enigma-footer a{color:#c6ddd5}.enigma-footer p{color:#a8c1b9}.footer-legal,.template-credit{font-size:12px}.template-credit{opacity:.55}.enigma-mobile-bar{position:fixed;z-index:9999;bottom:0;left:0;right:0;height:66px;background:#fff;box-shadow:0 -8px 25px rgba(0,0,0,.12);display:flex}.enigma-mobile-bar a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--ed-ink);font-size:19px}.enigma-mobile-bar a.primary{background:var(--ed-green);color:#fff}.enigma-mobile-bar small{font-size:10px;margin-top:2px}.enigma-messages{position:fixed;z-index:10000;top:92px;left:50%;transform:translateX(-50%);max-width:760px}.page-hero{min-height:380px;background-size:cover;background-position:center;position:relative;display:flex;align-items:center}.page-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,35,29,.78),rgba(5,35,29,.25))}.page-hero .container{position:relative;z-index:2}.page-hero h1{color:#fff;font-size:46px;font-weight:700}.page-hero p,.page-hero a{color:#eef9f5}.enigma-content{padding:80px 0}.enigma-form-card{max-width:860px;margin:auto;background:#fff;border-radius:22px;padding:34px;box-shadow:0 18px 55px rgba(15,54,45,.11);border:1px solid #e4ece9}.enigma-form-card label{font-weight:700;font-size:13px;color:#394944}.enigma-form-card input[type=text],.enigma-form-card input[type=email],.enigma-form-card textarea,.enigma-form-card input[type=file]{width:100%;border:1px solid #dbe6e2;border-radius:10px;padding:12px 14px;background:#fbfdfc}.enigma-form-card textarea{min-height:120px}.enigma-form-card ul.errorlist{color:#a62a2a;padding-left:18px;font-size:13px}.contact-tile{border-radius:18px;background:#fff;border:1px solid #e5ece9;padding:28px;height:100%}.contact-tile .icon{font-size:28px;color:var(--ed-green);margin-bottom:12px}.price-category{background:#fff;border:1px solid #e5ece9;border-radius:18px;padding:24px;height:100%}.price-category h3{font-weight:700}.price-category p{color:var(--ed-muted)}.price-category .badge{background:var(--ed-mint);color:var(--ed-green-dark);padding:8px 10px}.service-detail-list .media{border-bottom:1px solid #e8efec;padding:20px 0}.service-detail-list .number{width:42px;height:42px;min-width:42px;border-radius:50%;background:var(--ed-mint);color:var(--ed-green);display:flex;align-items:center;justify-content:center;font-weight:700;margin-right:18px}.legal-page h2{margin-top:34px;font-weight:700}.legal-page p,.legal-page li{color:#56635f}
+@media(max-width:991px){.ftco-navbar-light{position:sticky!important;background:#fff!important}.ftco-navbar-light .navbar-toggler{color:var(--ed-ink)!important}.ftco-navbar-light .navbar-nav>.nav-item>.nav-link{color:var(--ed-ink)!important}.ftco-navbar-light .navbar-nav>.nav-item.cta>a{margin:8px 0;text-align:center}.home-slider .slider-item .slider-text h1{font-size:38px}.home-slider .slider-item{background-position:center}.page-hero h1{font-size:38px}}
+@media(max-width:767px){body{padding-bottom:66px}.home-slider .slider-item .slider-text h1{font-size:34px}.home-slider .slider-item .slider-text p{font-size:16px}.ftco-intro .container{padding:0}.ftco-intro .row{margin:0}.enigma-form-card{padding:22px 18px;border-radius:16px}.page-hero{min-height:310px}.page-hero h1{font-size:34px}.enigma-content{padding:56px 0}.enigma-footer{padding-bottom:40px}}
+.sample-text-area{padding:80px 0}.sample-text-area .par{max-width:960px}.sample-text-area h1,.sample-text-area h2,.sample-text-area h3{color:var(--ed-ink);font-weight:700}.sample-text-area p,.sample-text-area li{color:#56635f;line-height:1.8}.sample-text-area a{color:var(--ed-green)}
+
+/* Enigma Dent documents & certificates */
+.document-hero{background-position:center 38%}.document-section,.certificate-section{background:#f8fbfa}.document-eyebrow{display:inline-block;color:var(--ed-green);font-size:12px;font-weight:800;letter-spacing:1.7px;margin-bottom:10px}.document-title{font-size:36px;font-weight:700;color:var(--ed-ink);margin-bottom:12px}.document-lead{max-width:760px;margin:0 auto;color:var(--ed-muted);font-size:16px;line-height:1.75}.document-viewer-card{max-width:900px;margin:0 auto;background:#fff;padding:18px;border-radius:24px;border:1px solid #e1ebe7;box-shadow:0 18px 50px rgba(15,54,45,.10)}.document-viewer-card .image-lightbox{display:block;position:relative;border-radius:16px;overflow:hidden;background:#f1f5f3}.document-image{display:block;width:100%;height:auto;max-height:1100px;object-fit:contain;margin:auto}.document-zoom{position:absolute;right:18px;bottom:18px;background:rgba(8,61,49,.92);color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.18)}.document-note{max-width:900px;margin-left:auto;margin-right:auto;display:flex;align-items:flex-start;gap:14px;padding:18px 20px;border-radius:16px;background:var(--ed-mint);color:var(--ed-green-dark)}.document-note>span{font-size:24px;margin-top:1px}.document-note strong{display:block;font-size:15px}.document-note p{color:#46665d;font-size:13px;line-height:1.6}.certificate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.certificate-card{display:block;background:#fff;border:1px solid #e2ebe7;border-radius:20px;overflow:hidden;color:var(--ed-ink);box-shadow:0 10px 30px rgba(15,54,45,.06);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}.certificate-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(15,118,95,.13);border-color:#bedfd3;color:var(--ed-ink)}.certificate-image-wrap{position:relative;height:330px;background:#f1f5f3;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden}.certificate-image-wrap img{width:100%;height:100%;object-fit:contain;transition:transform .35s ease}.certificate-card:hover .certificate-image-wrap img{transform:scale(1.025)}.certificate-overlay{position:absolute;left:50%;bottom:16px;transform:translate(-50%,8px);opacity:0;background:rgba(8,61,49,.92);color:#fff;padding:9px 13px;border-radius:999px;font-size:12px;font-weight:700;transition:.25s;white-space:nowrap}.certificate-card:hover .certificate-overlay{opacity:1;transform:translate(-50%,0)}.certificate-meta{padding:16px 18px 18px}.certificate-meta span{display:block;text-transform:uppercase;letter-spacing:1.2px;font-size:10px;font-weight:800;color:var(--ed-green);margin-bottom:4px}.certificate-meta strong{font-size:14px;color:var(--ed-ink)}.enigma-lightbox{position:fixed;z-index:11000;inset:0;background:rgba(5,20,16,.92);display:none;align-items:center;justify-content:center;padding:36px}.enigma-lightbox.is-open{display:flex}.enigma-lightbox-inner{max-width:1200px;max-height:92vh;display:flex;flex-direction:column;align-items:center}.enigma-lightbox img{max-width:100%;max-height:84vh;object-fit:contain;border-radius:10px;background:#fff;box-shadow:0 24px 80px rgba(0,0,0,.35)}.enigma-lightbox-caption{color:#e4f3ee;margin-top:12px;font-size:13px}.enigma-lightbox-close{position:absolute;right:22px;top:14px;border:0;background:transparent;color:#fff;font-size:44px;font-weight:300;line-height:1;cursor:pointer}.lightbox-open{overflow:hidden}.enigma-footer .ftco-heading-2{margin-bottom:20px}.footer-legal a{white-space:nowrap}
+@media(max-width:991px){.certificate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.certificate-image-wrap{height:300px}.document-title{font-size:32px}}
+@media(max-width:575px){.certificate-grid{grid-template-columns:1fr;gap:18px}.certificate-image-wrap{height:360px}.document-viewer-card{padding:10px;border-radius:16px}.document-zoom{right:10px;bottom:10px;font-size:11px}.document-title{font-size:28px}.enigma-lightbox{padding:18px}.enigma-lightbox-close{right:12px;top:8px}.certificate-overlay{opacity:1;transform:translate(-50%,0)}}
+
+.certificate-meta small{display:block;color:var(--ed-muted);font-size:11px;margin-top:6px}
+
+
+/* Enigma Dent: clean directions list */
+.enigma-direction-list{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+.enigma-direction-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  padding:13px 0;
+  border-bottom:1px solid rgba(255,255,255,.18);
+  transition:opacity .2s ease, transform .2s ease;
+}
+.enigma-direction-link:last-child{border-bottom:0}
+.enigma-direction-link:hover{
+  color:#fff;
+  opacity:.82;
+  transform:translateX(3px);
+}
+.enigma-direction-link .icon-arrow-right{
+  font-size:15px;
+  opacity:.65;
+}
+
+/* Contacts + map */
+.enigma-contacts-section .contact-tile{
+  display:flex;
+  flex-direction:column;
+}
+.enigma-contacts-section .contact-tile > a{
+  margin-top:auto;
+}
+.contact-tile--accent{
+  background:#0f765f;
+  border-color:#0f765f;
+  color:#fff;
+}
+.contact-tile--accent h3,
+.contact-tile--accent p,
+.contact-tile--accent .icon,
+.contact-tile--accent a{color:#fff !important}
+
+.enigma-map-card{
+  display:grid;
+  grid-template-columns:minmax(280px, .7fr) minmax(0, 1.6fr);
+  background:#f7faf9;
+  border:1px solid #e2ebe8;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 14px 45px rgba(18,55,46,.08);
+}
+.enigma-map-copy{
+  padding:38px 34px;
+  align-self:center;
+}
+.enigma-map-copy h2{
+  color:#153a32;
+  margin-bottom:18px;
+}
+.enigma-map-copy a{color:#0f765f}
+.enigma-map-frame{min-height:420px}
+.enigma-map-frame iframe{
+  width:100%;
+  height:100%;
+  min-height:420px;
+  border:0;
+  display:block;
+}
+.enigma-topbar-phone{color:inherit}
+.enigma-topbar-phone:hover{color:#fff;text-decoration:underline}
+
+@media (max-width: 767.98px){
+  .enigma-map-card{grid-template-columns:1fr}
+  .enigma-map-copy{padding:28px 24px}
+  .enigma-map-frame,
+  .enigma-map-frame iframe{min-height:330px}
+}
+
+
+/* Contacts refresh: compact 4-card row + full-width map */
+.enigma-contacts-section{padding-top:58px;padding-bottom:72px}
+.enigma-contact-grid{margin-left:-8px;margin-right:-8px}
+.enigma-contact-grid > [class*="col-"]{padding-left:8px;padding-right:8px}
+.enigma-contacts-section .contact-tile{padding:22px 22px;border-radius:16px;min-height:214px}
+.enigma-contacts-section .contact-tile .icon{font-size:25px;margin-bottom:8px}
+.enigma-contacts-section .contact-tile h3{font-size:22px;margin-bottom:8px}
+.enigma-contacts-section .contact-tile p{font-size:14px;line-height:1.55;margin-bottom:18px}
+.enigma-map-card--full{grid-template-columns:280px minmax(0,1fr);margin-top:20px!important}
+.enigma-map-card--full .enigma-map-copy{padding:30px 26px}
+.enigma-map-card--full .enigma-map-frame,
+.enigma-map-card--full .enigma-map-frame iframe{min-height:390px}
+
+/* Footer appointment CTA: soft mint, readable on dark footer */
+.enigma-footer .footer-appointment-btn{
+  background:#bfe8da;
+  border:1px solid #bfe8da;
+  color:#0b4f40!important;
+  font-weight:700;
+  border-radius:999px;
+  box-shadow:none;
+}
+.enigma-footer .footer-appointment-btn:hover,
+.enigma-footer .footer-appointment-btn:focus{
+  background:#d8f2e9;
+  border-color:#d8f2e9;
+  color:#083e33!important;
+}
+
+@media(max-width:991.98px){
+  .enigma-map-card--full{grid-template-columns:1fr}
+  .enigma-map-card--full .enigma-map-copy{padding:26px 24px}
+}
+@media(max-width:575.98px){
+  .enigma-contacts-section{padding-top:40px;padding-bottom:54px}
+  .enigma-contact-grid{margin-left:-6px;margin-right:-6px}
+  .enigma-contact-grid > [class*="col-"]{padding-left:6px;padding-right:6px}
+  .enigma-contacts-section .contact-tile{min-height:0;padding:19px 18px}
+  .enigma-contacts-section .contact-tile h3{font-size:20px}
+  .enigma-contacts-section .contact-tile p{margin-bottom:14px}
+  .enigma-map-card--full .enigma-map-frame,
+  .enigma-map-card--full .enigma-map-frame iframe{min-height:320px}
+}
