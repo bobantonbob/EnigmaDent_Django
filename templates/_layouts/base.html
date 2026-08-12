@@ -6,13 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{% if title %}{{ title }} | {% endif %}Enigma Dent</title>
   <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}Enigma Dent — стоматологічний кабінет у Києві. Лікування зубів, реставрації, професійна гігієна, пародонтологія, коронки та протезування.{% endif %}">
+
+  <link rel="canonical" href="https://enigma-dent.com.ua{{ request.path }}">
+
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
   <meta property="og:site_name" content="Enigma Dent">
   <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}Enigma Dent">
   <meta property="og:description" content="{% if meta_description %}{{ meta_description }}{% else %}Стоматологія Enigma Dent у Києві — послуги, актуальні ціни та онлайн-запис.{% endif %}">
+  <meta property="og:url" content="https://enigma-dent.com.ua{{ request.path }}">
+  <meta property="og:image" content="https://enigma-dent.com.ua{% static 'enigma/images/logo/logo.png' %}">
+  <meta property="og:image:secure_url" content="https://enigma-dent.com.ua{% static 'enigma/images/logo/logo.png' %}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Enigma Dent — стоматологія у Києві">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if title %}{{ title }} | {% endif %}Enigma Dent">
+  <meta name="twitter:description" content="{% if meta_description %}{{ meta_description }}{% else %}Стоматологія Enigma Dent у Києві — послуги, актуальні ціни та онлайн-запис.{% endif %}">
+  <meta name="twitter:image" content="https://enigma-dent.com.ua{% static 'enigma/images/logo/logo.png' %}">
+
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#0f765f">
-  <link rel="icon" href="{% static 'enigma/images/logo/favicon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'enigma/images/logo/favicon.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'enigma/images/logo/favicon.png' %}">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'enigma/css/open-iconic-bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'enigma/css/animate.css' %}">
@@ -33,7 +49,9 @@
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Enigma Dent",
-    "url": "{{ request.scheme }}://{{ request.get_host }}{% url 'home' %}",
+    "url": "https://enigma-dent.com.ua{% url 'home' %}",
+    "logo": "https://enigma-dent.com.ua{% static 'enigma/images/logo/logo.png' %}",
+    "image": "https://enigma-dent.com.ua{% static 'enigma/images/logo/logo.png' %}",
     "telephone": "+380662090409",
     "email": "enigma.dent2004@gmail.com",
     "address": {
