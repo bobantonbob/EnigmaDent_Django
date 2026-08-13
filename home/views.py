@@ -180,7 +180,7 @@ def robots_txt(request):
         'Disallow: /admin/',
         f'Sitemap: {settings.SITE_URL}/sitemap.xml',
     ]
-    return HttpResponse('\\n'.join(lines), content_type='text/plain')
+    return HttpResponse('\n'.join(lines), content_type='text/plain')
 
 
 def sitemap_xml(request):
